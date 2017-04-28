@@ -1815,6 +1815,8 @@ GLFWAPI void glfwWindowHint(int hint, int value);
  *  a custom `Info.plist` template for this, which can be found as
  *  `CMake/MacOSXBundleInfo.plist.in` in the source tree.
  *
+ *  @remark @x11 There is no mechanism for setting the window icon yet.
+ *
  *  @remark @x11 Some window managers will not respect the placement of
  *  initially hidden windows.
  *
@@ -2310,8 +2312,10 @@ GLFWAPI void glfwRestoreWindow(GLFWwindow* window);
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
  *  GLFW_PLATFORM_ERROR.
  *
- *  @par Thread Safety
- *  This function may only be called from the main thread.
+ *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
+ *  GLFW_PLATFORM_ERROR.
+ *
+ *  @thread_safety This function must only be called from the main thread.
  *
  *  @sa @ref window_iconify
  *  @sa glfwIconifyWindow
@@ -3138,6 +3142,10 @@ GLFWAPI void glfwGetCursorPos(GLFWwindow* window, double* xpos, double* ypos);
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
  *  GLFW_PLATFORM_ERROR.
+ *
+ *  @remark @x11 Due to the asynchronous nature of X11, it may take a moment for
+ *  the window focus event to arrive.  This means you may not be able to set the
+ *  cursor position directly after window creation.
  *
  *  @thread_safety This function must only be called from the main thread.
  *
