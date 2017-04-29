@@ -6,8 +6,8 @@
 	url = git://github.com/cinder/TinderBox-Win.git
 [submodule "include/boost"]
 	path = include/boost
-	url = git://github.com/cinder/Cinder-Boost.git
-	branch = boost_1_60
+	url = git://github.com/jhon/Cinder-Boost.git
+	branch = boost_1_64
 [submodule "tools/vulkan"]
 	path = tools/vulkan
 	url = git://github.com/jhon/Cinder-Vulkan-Tools.git
