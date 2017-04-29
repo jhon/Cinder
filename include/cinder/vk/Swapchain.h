@@ -64,7 +64,7 @@ public:
 		Options& depthStencilSamples( VkSampleCountFlagBits value ) { mDepthStencilSamples = value; return *this; }
 
 	private:
-		VkPresentModeKHR				mPresentMode = VK_PRESENT_MODE_FIFO_KHR;
+		VkPresentModeKHR				mPresentMode = VK_PRESENT_MODE_MAX_ENUM_KHR;
 		VkFormat						mDepthStencilFormat = VK_FORMAT_UNDEFINED;
 		VkSampleCountFlagBits			mDepthStencilSamples = VK_SAMPLE_COUNT_1_BIT;
 		friend class Swapchain;
