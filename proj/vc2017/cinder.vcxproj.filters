@@ -1203,6 +1203,9 @@
     <ClCompile Include="..\..\src\cinder\vk\spir2cross\spir2glsl.cpp">
       <Filter>Source Files\vk\spir2cross</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cinder\app\RendererVk.cpp">
+      <Filter>Source Files\app</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\AntTweakBar\AntPerfTimer.h">
@@ -2518,6 +2521,9 @@
     </ClInclude>
     <ClInclude Include="..\..\include\cinder\vk\wrapper.h">
       <Filter>Header Files\vk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\cinder\app\RendererVk.h">
+      <Filter>Header Files\app</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
